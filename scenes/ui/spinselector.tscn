@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://3c8ru4jg8hys"]
+
+[ext_resource type="Script" uid="uid://dd3k3jpfr1ld2" path="res://scripts/spinselector.gd" id="1_y5b3o"]
+
+[node name="spinselector" type="Control" unique_id=635371455]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y5b3o")
+
+[node name="background" type="ColorRect" parent="." unique_id=710411848]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+
+[node name="indicator" type="ColorRect" parent="." unique_id=441576776]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 48.0
+offset_bottom = 48.0
+color = Color(0, 0, 0, 1)

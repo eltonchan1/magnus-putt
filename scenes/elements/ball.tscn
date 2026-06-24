@@ -1,14 +1,32 @@
-[gd_scene format=3 uid="uid://gx6lf3181hke"]
+[gd_scene format=3 uid="uid://b7na4ke7dkdw1"]
 
 [ext_resource type="Script" uid="uid://cvcrfajscip8o" path="res://scripts/ball.gd" id="1_phcul"]
+[ext_resource type="Texture2D" uid="uid://bve6041k37gbh" path="res://icon.svg" id="2_p2e80"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qw67i"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fq0mk"]
+friction = 0.3
+bounce = 0.6
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7yg0"]
 radius = 12.0
 
-[node name="ball" type="RigidBody2D" unique_id=344869845]
+[node name="Ball" type="RigidBody2D" unique_id=458081983]
+collision_mask = 14
+physics_material_override = SubResource("PhysicsMaterial_fq0mk")
+lock_rotation = true
+continuous_cd = 1
+contact_monitor = true
+max_contacts_reported = 4
+linear_damp = 1.2
+angular_damp = 5.0
 script = ExtResource("1_phcul")
 
-[node name="collision" type="CollisionShape2D" parent="." unique_id=1519949833]
-shape = SubResource("CircleShape2D_qw67i")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1646537902]
+position = Vector2(2.861023e-06, 1.4305115e-06)
+scale = Vector2(0.18750006, 0.18750003)
+texture = ExtResource("2_p2e80")
 
-[node name="sprite" type="Sprite2D" parent="." unique_id=716724886]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1883575979]
+shape = SubResource("CircleShape2D_j7yg0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

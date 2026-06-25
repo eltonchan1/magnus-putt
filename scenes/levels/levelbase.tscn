@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dhq7qbpabjh0q"]
+
+[ext_resource type="Script" uid="uid://cw4kg831ruujf" path="res://scripts/level.gd" id="1_nypb2"]
+[ext_resource type="PackedScene" uid="uid://b7na4ke7dkdw1" path="res://scenes/elements/ball.tscn" id="2_5a1on"]
+[ext_resource type="Resource" uid="uid://bpjvl2lap6o5i" path="res://resources/levels/level01.tres" id="2_6j250"]
+[ext_resource type="PackedScene" uid="uid://3c8ru4jg8hys" path="res://scenes/ui/spinselector.tscn" id="3_2yjl7"]
+[ext_resource type="PackedScene" uid="uid://boxkhiu40dg2c" path="res://scenes/elements/hole.tscn" id="4_6j250"]
+[ext_resource type="PackedScene" uid="uid://cy0yobjocgg5v" path="res://scenes/elements/wall.tscn" id="5_bxe22"]
+[ext_resource type="PackedScene" uid="uid://bk84k4wpneb45" path="res://scenes/ui/hud.tscn" id="6_5a1on"]
+[ext_resource type="PackedScene" uid="uid://c8uponahloqlp" path="res://scenes/ui/winscreen.tscn" id="7_2yjl7"]
+
+[node name="test" type="Node2D" unique_id=337421681]
+script = ExtResource("1_nypb2")
+level_data = ExtResource("2_6j250")
+
+[node name="ball" parent="." unique_id=458081983 instance=ExtResource("2_5a1on")]
+position = Vector2(180, 352)
+linear_damp = 0.8
+
+[node name="spinselector" parent="." unique_id=444263430 instance=ExtResource("3_2yjl7")]
+
+[node name="hole" parent="." unique_id=962097323 instance=ExtResource("4_6j250")]
+position = Vector2(1136, 364)
+
+[node name="wall" parent="." unique_id=810396097 instance=ExtResource("5_bxe22")]
+position = Vector2(646, 342)
+scale = Vector2(1.545, 16.885)
+wall_color = Color(0.4, 0.4509804, 0.54901963, 0)
+
+[node name="wall2" parent="." unique_id=877009316 instance=ExtResource("5_bxe22")]
+position = Vector2(-21, 358)
+scale = Vector2(1.545, 42.31)
+wall_color = Color(0.4, 0.4509804, 0.54901963, 0)
+
+[node name="wall3" parent="." unique_id=119305643 instance=ExtResource("5_bxe22")]
+position = Vector2(1299, 382.00003)
+scale = Vector2(1.545, 42.31)
+wall_color = Color(0.4, 0.4509804, 0.54901963, 0)
+
+[node name="wall4" parent="." unique_id=2041663478 instance=ExtResource("5_bxe22")]
+position = Vector2(643.0001, -23.99997)
+rotation = 1.5707964
+scale = Vector2(1.545, 69.09)
+wall_color = Color(0.4, 0.4509804, 0.54901963, 0)
+
+[node name="wall5" parent="." unique_id=1158300872 instance=ExtResource("5_bxe22")]
+position = Vector2(636, 738)
+rotation = 1.5707964
+scale = Vector2(1.545, 69.09)
+wall_color = Color(0.4, 0.4509804, 0.54901963, 0)
+
+[node name="hud" parent="." unique_id=571574833 instance=ExtResource("6_5a1on")]
+
+[node name="winscreen" parent="." unique_id=124814863 instance=ExtResource("7_2yjl7")]

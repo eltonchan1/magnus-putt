@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bk84k4wpneb45"]
+
+[ext_resource type="Script" uid="uid://mtm6cej3tuqm" path="res://scripts/hud.gd" id="1_0mwgc"]
+
+[node name="hud" type="CanvasLayer" unique_id=571574833]
+script = ExtResource("1_0mwgc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=347489095]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+
+[node name="shotlabel" type="Label" parent="HBoxContainer" unique_id=1136069769]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "SHOTS: 3"
+
+[node name="parlabel" type="Label" parent="HBoxContainer" unique_id=719281117]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "  PAR: 3"

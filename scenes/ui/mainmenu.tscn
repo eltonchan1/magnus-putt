@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dbhgm1hyqvfkp"]
+
+[ext_resource type="Script" uid="uid://cuyl73lsdwrqh" path="res://scripts/mainmenu.gd" id="1_c040g"]
+
+[node name="mainmenu" type="Control" unique_id=1444504722]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_c040g")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=6759190]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=473515282]
+offset_right = 99.0
+offset_bottom = 93.0
+
+[node name="titlelabel" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=101253749]
+layout_mode = 2
+text = "magnus putt"
+
+[node name="playbutton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1211738365]
+layout_mode = 2
+text = "play"
+
+[node name="quitbutton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=803990023]
+layout_mode = 2
+text = "quit"

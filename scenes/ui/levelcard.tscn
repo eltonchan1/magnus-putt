@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cskk65qcgoxyi"]
+
+[ext_resource type="Script" uid="uid://b6b0xl8bmp4sb" path="res://scripts/levelcard.gd" id="1_4pr2w"]
+
+[node name="levelcard" type="PanelContainer" unique_id=1767250796]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4pr2w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2026722023]
+layout_mode = 2
+
+[node name="preview" type="TextureRect" parent="VBoxContainer" unique_id=400007507]
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 2
+expand_mode = 2
+stretch_mode = 6
+
+[node name="namelabel" type="Label" parent="VBoxContainer" unique_id=1260533302]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1917155226]
+layout_mode = 2
+
+[node name="starslabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=330932409]
+layout_mode = 2
+
+[node name="shotslabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1137642785]
+layout_mode = 2

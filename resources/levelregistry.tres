@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelRegistry" format=3 uid="uid://b5m3mijqnfhgj"]
+
+[ext_resource type="Script" uid="uid://cakjdqqejtjm4" path="res://resources/leveldata.gd" id="1_2h8fp"]
+[ext_resource type="Script" uid="uid://dk6ak5p5k1upg" path="res://resources/levelregistry.gd" id="2_a0o6y"]
+[ext_resource type="Resource" uid="uid://bpjvl2lap6o5i" path="res://resources/levels/level01.tres" id="2_ejnxo"]
+[ext_resource type="Resource" uid="uid://dsesluj8ramh6" path="res://resources/levels/level02.tres" id="3_lxkjh"]
+
+[resource]
+script = ExtResource("2_a0o6y")
+levels = Array[ExtResource("1_2h8fp")]([ExtResource("2_ejnxo"), ExtResource("3_lxkjh")])
+metadata/_custom_type_script = "uid://dk6ak5p5k1upg"

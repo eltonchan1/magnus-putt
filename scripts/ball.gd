@@ -4,13 +4,17 @@ var spin: Vector2 = Vector2.ZERO
 var is_moving: bool = false
 var is_aiming: bool = false
 var drag_start: Vector2 = Vector2.ZERO
+var launch_direction: Vector2 = Vector2.ZERO
+var launch_power: float = 0.0
 
 const MAX_DRAG_DISTANCE: float = 150.0
 const LAUNCH_FORCE_MULTIPLIER: float = 8.0
 const SPIN_LATERAL_FORCE: float = 750.0
-const SPIN_DECAY: float = 0.99
+const SPIN_DECAY: float = 0.98
 const MIN_VELOCITY_THRESHOLD: float = 15.0
-
+const SPIN_SIDE_MULTIPLIER: float = 1.0
+const SPIN_TOP_MULTIPLIER: float = 0.25 
+const SPIN_BACK_MULTIPLIER: float = 7.5
 signal ball_stopped
 signal ball_entered_hole
 
@@ -44,6 +48,8 @@ var locked_spin: Vector2 = Vector2.ZERO
 
 func launch(direction: Vector2, power: float):
 	pending_launch = direction * power * MAX_DRAG_DISTANCE * LAUNCH_FORCE_MULTIPLIER
+	launch_direction = direction
+	launch_power = power
 	locked_spin = spin
 	is_moving = true
 
@@ -56,11 +62,17 @@ func _physics_process(delta: float):
 	if not is_moving:
 		return
 	frames_since_launch += 1
-	if spin.length() > 0.01 and linear_velocity.length() > MIN_VELOCITY_THRESHOLD:
-		var travel_dir = linear_velocity.normalized()
+	if locked_spin.length() > 0.01:
+		var travel_dir = linear_velocity.normalized() if linear_velocity.length() > 1.0 else launch_direction
 		var right_perp = Vector2(-travel_dir.y, travel_dir.x)
-		var lateral_force = right_perp * locked_spin.x * SPIN_LATERAL_FORCE
-		var forward_force = travel_dir * locked_spin.y * SPIN_LATERAL_FORCE * 0.8
+		var lateral_force = right_perp * locked_spin.x * SPIN_LATERAL_FORCE * SPIN_SIDE_MULTIPLIER * launch_power
+		var vertical_spin = locked_spin.y
+		var vertical_multiplier = SPIN_BACK_MULTIPLIER if vertical_spin < 0.0 else SPIN_TOP_MULTIPLIER
+		var forward_force: Vector2
+		if vertical_spin < 0.0:
+			forward_force = -launch_direction * abs(vertical_spin) * SPIN_LATERAL_FORCE * vertical_multiplier * launch_power
+		else:
+			forward_force = travel_dir * vertical_spin * SPIN_LATERAL_FORCE * vertical_multiplier * launch_power
 		apply_central_force(lateral_force + forward_force)
 		locked_spin *= SPIN_DECAY
 	if frames_since_launch > 10 and linear_velocity.length() < MIN_VELOCITY_THRESHOLD and is_moving:

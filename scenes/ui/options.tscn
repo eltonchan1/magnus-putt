@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cmwqlb1yurlla"]
+
+[ext_resource type="Script" uid="uid://demho6bd0ip83" path="res://scripts/options.gd" id="1_ad3a0"]
+
+[node name="options" type="Control" unique_id=76449316]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ad3a0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1298313130]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=1408311439]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer" unique_id=11373699]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1386030159]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=211421916]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=247909465]
+layout_mode = 2
+text = "DISPLAY"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=923504837]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=113828856]
+layout_mode = 2
+text = "Window Mode"
+
+[node name="windowmodeoption" type="OptionButton" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=419352635]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=809750986]
+layout_mode = 2
+text = "AUDIO"
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=707160150]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1450889]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=141162765]
+layout_mode = 2
+text = "Master"
+
+[node name="masterslider" type="HSlider" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=2075652889]
+layout_mode = 2
+max_value = 150.0
+
+[node name="mastervalue" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=937520450]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=999894256]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=738895981]
+layout_mode = 2
+text = "Music"
+
+[node name="musicslider" type="HSlider" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=1856314689]
+layout_mode = 2
+max_value = 150.0
+
+[node name="musicvalue" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=2120213216]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1638039861]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=445027917]
+layout_mode = 2
+text = "SFX"
+
+[node name="sfxslider" type="HSlider" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=1657237017]
+layout_mode = 2
+max_value = 150.0
+
+[node name="sfxvalue" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=659736753]
+layout_mode = 2
+
+[node name="backbutton" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=135725033]
+layout_mode = 2
+text = "BACK"

@@ -8,7 +8,7 @@ const REGISTRY = preload("res://resources/levelregistry.tres")
 
 func _ready():
 	back_button.pressed.connect(func():
-		get_tree().change_scene_to_file("res://scenes/ui/mainmenu.tscn")
+		scenetransition.go_to("res://scenes/ui/mainmenu.tscn")
 	)
 	_load_levels()
 
@@ -21,4 +21,4 @@ func _load_levels():
 
 func _on_card_pressed(data: LevelData):
 	if data.scene_path != "":
-		get_tree().change_scene_to_file(data.scene_path)
+		scenetransition.go_to(data.scene_path)

@@ -45,3 +45,4 @@ position = Vector2(89, 312)
 [node name="hud" parent="." unique_id=571574833 instance=ExtResource("6_3yqkj")]
 
 [node name="winscreen" parent="." unique_id=124814863 instance=ExtResource("7_if0f4")]
+visible = false

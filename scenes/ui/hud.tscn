@@ -20,3 +20,18 @@ text = "SHOTS: 3"
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "  PAR: 3"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1679711817]
+offset_left = 212.0
+offset_top = 16.0
+offset_right = 212.0
+offset_bottom = 56.0
+
+[node name="retrybutton" type="Button" parent="HBoxContainer2" unique_id=1644530029]
+layout_mode = 2
+
+[node name="optionsbutton" type="Button" parent="HBoxContainer2" unique_id=21045171]
+layout_mode = 2
+
+[node name="levelselectbutton" type="Button" parent="HBoxContainer2" unique_id=1646209662]
+layout_mode = 2

@@ -15,16 +15,24 @@ script = ExtResource("1_c040g")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=6759190]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=473515282]
-offset_right = 99.0
-offset_bottom = 93.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="titlelabel" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=101253749]
 layout_mode = 2
+theme_override_font_sizes/font_size = 75
 text = "magnus putt"
 
 [node name="playbutton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1211738365]
 layout_mode = 2
 text = "play"
+
+[node name="optionsbutton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1868894080]
+layout_mode = 2
+text = "options"
 
 [node name="quitbutton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=803990023]
 layout_mode = 2

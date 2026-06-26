@@ -17,7 +17,19 @@ func _ready():
 	win_screen.retry_pressed.connect(_on_retry)
 	win_screen.next_pressed.connect(_on_next)
 	win_screen.menu_pressed.connect(_on_menu)
+	hud.retry_pressed.connect(func():
+		scenetransition.go_to(level_data.scene_path)
+	)
+	hud.menu_pressed.connect(func():
+		scenetransition.go_to("res://scenes/ui/main_menu.tscn")
+	)
+	hud.options_pressed.connect(func():
+		settingsmanager.options_return_scene = level_data.scene_path
+		scenetransition.go_to("res://scenes/ui/options.tscn", scenetransition.Type.CIRCLE)
+	)
 	hud.setup(par)
+	for brick in get_tree().get_nodes_in_group("kill_brick"):
+		brick.ball_killed.connect(_on_ball_killed)
 
 func _on_spin_changed(spin: Vector2):
 	if not ball.is_moving:
@@ -30,13 +42,13 @@ func _on_ball_holed():
 	win_screen.show_results(level_data, shot_count)
 
 func _on_retry():
-	get_tree().reload_current_scene()
+	scenetransition.go_to(level_data.scene_path)
 
 func _on_next():
-	get_tree().change_scene_to_file(level_data.next_level)
+	scenetransition.go_to(level_data.next_level)
 
 func _on_menu():
-	get_tree().change_scene_to_file("res://scenes/ui/mainmenu.tscn")
+	scenetransition.go_to("res://scenes/ui/levelselect.tscn")
 
 func _unhandled_input(event: InputEvent):
 	if event is InputEventMouseButton:
@@ -51,3 +63,6 @@ func _unhandled_input(event: InputEvent):
 	if event is InputEventMouseMotion:
 		if ball.is_aiming:
 			ball._update_aim(event.global_position)
+
+func _on_ball_killed():
+	scenetransition.go_to(level_data.scene_path)

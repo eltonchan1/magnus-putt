@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b7rturhnaufel"]
+
+[ext_resource type="Script" uid="uid://jabpk01wvmaj" path="res://scripts/killbrick.gd" id="1_aejyg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnhsa"]
+
+[node name="killbrick" type="Area2D" unique_id=255154150]
+collision_layer = 4
+script = ExtResource("1_aejyg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139596593]
+shape = SubResource("RectangleShape2D_jnhsa")

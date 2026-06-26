@@ -20,12 +20,12 @@ func _ready():
 	hud.retry_pressed.connect(func():
 		scenetransition.go_to(level_data.scene_path)
 	)
-	hud.menu_pressed.connect(func():
+	hud.levelselect_pressed.connect(func():
 		scenetransition.go_to("res://scenes/ui/main_menu.tscn")
 	)
 	hud.options_pressed.connect(func():
 		settingsmanager.options_return_scene = level_data.scene_path
-		scenetransition.go_to("res://scenes/ui/options.tscn", scenetransition.Type.CIRCLE)
+		scenetransition.go_to("res://scenes/ui/options.tscn")
 	)
 	hud.setup(par)
 	for brick in get_tree().get_nodes_in_group("kill_brick"):

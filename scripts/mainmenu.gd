@@ -12,5 +12,5 @@ func _ready():
 		get_tree().quit()
 	)
 	options_button.pressed.connect(func():
-		scenetransition.go_to("res://scenes/ui/options.tscn", scenetransition.Type.CIRCLE)
+		scenetransition.go_to("res://scenes/ui/options.tscn")
 	)

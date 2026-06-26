@@ -1,34 +1,23 @@
 shader_type canvas_item;
 
-uniform int transition_type = 0; // 0 = bars, 1 = circle
-uniform float progress: hint_range(0.0, 1.0) = 0.0;
-uniform int bar_count = 10;
-uniform float stagger = 0.15; // how much each bar is delayed
+uniform float progress : hint_range(0.0, 1.0) = 0.0;
+uniform int bar_count = 3;
+uniform vec4 bar_color : source_color = vec4(0.0, 0.0, 0.0, 1.0);
+uniform bool covering = true;
 
 void fragment() {
-	vec2 uv = UV;
-	float alpha = 0.0;
-	if (transition_type == 0) {
-		// Staggered horizontal bars
-		float bar_index = floor(uv.y * float(bar_count));
-		float bar_uv = fract(uv.y * float(bar_count));
-		float delay = (bar_index / float(bar_count)) * stagger;
-		float bar_progress = clamp((progress - delay) / (1.0 - stagger), 0.0, 1.0);
-		float edge = smoothstep(bar_progress - 0.02, bar_progress + 0.02, uv.x);
-		alpha = 1.0 - edge;
+	float bar_index = floor(UV.y * float(bar_count));
+	float stagger = bar_index / float(bar_count) * 0.3;
+	float bar_progress = clamp((progress - stagger) / (1.0 - 0.3), 0.0, 1.0);
+	bool covered;
+	if (covering) {
+		covered = UV.x < bar_progress;
 	} else {
-		vec2 center = vec2(0.5, 0.5);
-		vec2 aspect_uv = vec2(uv.x, uv.y * (1080.0 / 1920.0));
-		vec2 aspect_center = vec2(center.x, center.y * (1080.0 / 1920.0));
-		float dist = distance(aspect_uv, aspect_center);        
-		float max_dist = distance(vec2(0.0, 0.0), aspect_center);
-		float normalized_dist = dist / max_dist;
-		float edge_softness = 0.03;
-		alpha = smoothstep(
-			progress - edge_softness,
-			progress + edge_softness,
-			normalized_dist
-		);
+		covered = UV.x < (1.0 - bar_progress);
 	}
-	COLOR = vec4(0.0, 0.0, 0.0, alpha);
+	if (covered) {
+		COLOR = bar_color;
+	} else {
+		COLOR = vec4(0.0, 0.0, 0.0, 0.0);
+	}
 }

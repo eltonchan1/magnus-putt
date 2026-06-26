@@ -26,7 +26,7 @@ func _ready():
 	music_slider.value_changed.connect(_on_music_changed)
 	sfx_slider.value_changed.connect(_on_sfx_changed)
 	back_button.pressed.connect(func():
-		get_tree().change_scene_to_file(return_scene)
+		scenetransition.go_to(return_scene)
 	)
 
 func _on_window_mode_selected(index: int):

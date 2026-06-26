@@ -6,8 +6,7 @@ func _ready():
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body):
-	if body.is_in_group("ball"):
-		emit_signal("ball_killed")
+	emit_signal("ball_killed")
 
 func _draw():
 	var shape = $CollisionShape2D.shape as RectangleShape2D

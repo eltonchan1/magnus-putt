@@ -35,6 +35,10 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[gui]
+
+theme/custom_font="uid://c7o523oiw32"
+
 [layer_names]
 
 2d_physics/layer_1="ball"

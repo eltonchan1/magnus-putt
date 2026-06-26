@@ -1,13 +1,13 @@
 extends Control
 
 @onready var window_mode_option = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/windowmodeoption
-@onready var master_slider = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2/masterslider
-@onready var master_value = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2/mastervalue
-@onready var music_slider = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3/musicslider
-@onready var music_value = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3/musicvalue
-@onready var sfx_slider = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4/sfxslider
-@onready var sfx_value = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4/sfxvalue
-@onready var back_button = $CanvasLayer/PanelContainer/VBoxContainer/backbutton
+@onready var master_slider = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer2/masterslider
+@onready var master_value = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer2/mastervalue
+@onready var music_slider = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer3/musicslider
+@onready var music_value = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer3/musicvalue
+@onready var sfx_slider = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer4/sfxslider
+@onready var sfx_value = $CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer4/sfxvalue
+@onready var back_button = $CanvasLayer/backbutton
 
 var return_scene: String = "res://scenes/ui/mainmenu.tscn"
 

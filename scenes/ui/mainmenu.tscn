@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dbhgm1hyqvfkp"]
 
 [ext_resource type="Script" uid="uid://cuyl73lsdwrqh" path="res://scripts/mainmenu.gd" id="1_c040g"]
+[ext_resource type="Theme" uid="uid://bcferoux1gl3p" path="res://resources/button.tres" id="2_nudk7"]
 
 [node name="mainmenu" type="Control" unique_id=1444504722]
 layout_mode = 3
@@ -18,22 +19,81 @@ script = ExtResource("1_c040g")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = 130.5
+offset_right = -693.0
+offset_bottom = -138.5
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="titlelabel" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=101253749]
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
-text = "magnus putt"
+text = "MAGNUS PUTT"
+
+[node name="Label3" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=345976291]
+layout_mode = 2
 
 [node name="playbutton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1211738365]
 layout_mode = 2
-text = "play"
+theme = ExtResource("2_nudk7")
+text = "PLAY"
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=223464415]
+layout_mode = 2
 
 [node name="optionsbutton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1868894080]
 layout_mode = 2
-text = "options"
+theme = ExtResource("2_nudk7")
+text = "OPTIONS"
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=1672218894]
+layout_mode = 2
 
 [node name="quitbutton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=803990023]
 layout_mode = 2
-text = "quit"
+theme = ExtResource("2_nudk7")
+text = "QUIT"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1535413503]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0.1570405, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1420599741]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 40.0
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=35154260]
+layout_mode = 0
+offset_top = 680.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1725513309]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 720.0
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=1522408077]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 652.0
+offset_right = 80.0
+offset_bottom = 692.0
+rotation = 0.7853982
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="." unique_id=1524274469]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 10.999999
+offset_right = 80.0
+offset_bottom = 51.0
+rotation = 0.7853982
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)

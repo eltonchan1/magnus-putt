@@ -1,0 +1,46 @@
+[gd_resource type="Theme" format=3 uid="uid://cor7nruga70gh"]
+
+[ext_resource type="FontFile" uid="uid://c7o523oiw32" path="res://assets/fonts/0xProtoNerdFontPropo-Regular.ttf" id="1_x1mje"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pu4u2"]
+bg_color = Color(0.63485867, 0.98348767, 0.62899953, 1)
+border_width_bottom = 10
+border_color = Color(0.3167836, 0.68901837, 0.3274942, 1)
+corner_radius_bottom_right = 20
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1wut"]
+bg_color = Color(0.46565956, 0.95329434, 0.4782772, 1)
+border_width_bottom = 15
+border_color = Color(0.24329904, 0.53360623, 0.25108242, 1)
+corner_radius_bottom_right = 20
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpgc7"]
+bg_color = Color(0.63529414, 0.9843137, 0.627451, 1)
+corner_radius_bottom_right = 20
+corner_detail = 1
+
+[resource]
+Button/colors/font_color = Color(4.301686e-07, 0.24328756, 2.6471912e-07, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(3.6098064e-07, 0.43135667, 6.738305e-07, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 60
+Button/fonts/font = ExtResource("1_x1mje")
+Button/styles/hover = SubResource("StyleBoxFlat_pu4u2")
+Button/styles/normal = SubResource("StyleBoxFlat_j1wut")
+Button/styles/pressed = SubResource("StyleBoxFlat_dpgc7")

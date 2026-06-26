@@ -1,6 +1,135 @@
 [gd_scene format=3 uid="uid://cmwqlb1yurlla"]
 
 [ext_resource type="Script" uid="uid://demho6bd0ip83" path="res://scripts/options.gd" id="1_ad3a0"]
+[ext_resource type="FontFile" uid="uid://c7o523oiw32" path="res://assets/fonts/0xProtoNerdFontPropo-Regular.ttf" id="2_lr2b1"]
+[ext_resource type="Theme" uid="uid://cmjqi3wub4ijc" path="res://resources/hslider.tres" id="3_hhwow"]
+[ext_resource type="Theme" uid="uid://cor7nruga70gh" path="res://resources/buttonsmall.tres" id="3_l4ffv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ad3a0"]
+bg_color = Color(0, 0.15686275, 0, 1)
+
+[sub_resource type="DPITexture" id="DPITexture_l4ffv"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".75\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_wby6m"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".37\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_pykmj"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_gdfy8"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"4\" height=\"8\"><path fill=\"#fff\" fill-opacity=\".25\" d=\"M1 0h2v16H1z\"/></svg>
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0jeg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.5411765, 0.9607843, 0.54901963, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epl0h"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.5411765, 0.9607843, 0.54901963, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shnbx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0.3254902, 0.003921569, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="DPITexture" id="DPITexture_hhwow"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\"><path fill=\"none\" stroke=\"#b2b2b2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-opacity=\".85\" stroke-width=\"2\" d=\"m2 4 4 4 4-4\"/></svg>
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wby6m"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.63529414, 0.9843137, 0.627451, 1)
+border_width_bottom = 5
+border_color = Color(0.31764707, 0.6901961, 0.32941177, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pykmj"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+border_width_bottom = 5
+border_color = Color(0.24313726, 0.53333336, 0.2509804, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gdfy8"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.63529414, 0.9843137, 0.627451, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_l4ffv"]
+HSlider/constants/center_grabber = 0
+HSlider/constants/grabber_offset = 0
+HSlider/constants/tick_offset = 0
+HSlider/icons/grabber = SubResource("DPITexture_l4ffv")
+HSlider/icons/grabber_disabled = SubResource("DPITexture_wby6m")
+HSlider/icons/grabber_highlight = SubResource("DPITexture_pykmj")
+HSlider/icons/tick = SubResource("DPITexture_gdfy8")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_b0jeg")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_epl0h")
+HSlider/styles/slider = SubResource("StyleBoxFlat_shnbx")
+OptionButton/colors/font_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_hover_color = Color(2.0154752e-07, 0.13933498, 0.00066574453, 1)
+OptionButton/colors/font_hover_pressed_color = Color(0, 0.14509805, 0, 1)
+OptionButton/colors/font_outline_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_pressed_color = Color(0, 0.14375749, 0.0011811887, 1)
+OptionButton/constants/arrow_margin = 4
+OptionButton/constants/h_separation = 4
+OptionButton/constants/modulate_arrow = 0
+OptionButton/constants/outline_size = 0
+OptionButton/font_sizes/font_size = 25
+OptionButton/fonts/font = ExtResource("2_lr2b1")
+OptionButton/icons/arrow = SubResource("DPITexture_hhwow")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_wby6m")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_pykmj")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_gdfy8")
 
 [node name="options" type="Control" unique_id=76449316]
 layout_mode = 3
@@ -12,84 +141,257 @@ grow_vertical = 2
 script = ExtResource("1_ad3a0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1298313130]
+rotation = -18.849556
+transform = Transform2D(1, -4.7699523e-08, 4.7699523e-08, 1, 0, 0)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=991923206]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.15686275, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=1924117130]
+offset_right = 1280.0
+offset_bottom = 40.0
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer" unique_id=488674334]
+offset_top = 680.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer" unique_id=2142060092]
+offset_right = 40.0
+offset_bottom = 720.0
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="CanvasLayer" unique_id=1427602835]
+offset_left = 1240.0
+offset_top = 5.9127808e-05
+offset_right = 1280.0
+offset_bottom = 720.00006
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="CanvasLayer" unique_id=661543046]
+offset_left = 40.0
+offset_top = 652.0
+offset_right = 80.0
+offset_bottom = 692.0
+rotation = 0.7853982
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="CanvasLayer" unique_id=1430977734]
+offset_left = 1240.0001
+offset_top = 652.00006
+offset_right = 1280.0001
+offset_bottom = 692.00006
+rotation = 0.7853982
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="CanvasLayer" unique_id=2030290689]
+offset_left = 1240.0001
+offset_top = 11.000048
+offset_right = 1280.0001
+offset_bottom = 51.000046
+rotation = 0.7853982
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="CanvasLayer" unique_id=812449335]
+offset_left = 40.0
+offset_top = 10.999999
+offset_right = 80.0
+offset_bottom = 51.0
+rotation = 0.7853982
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=1408311439]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = 75.0
+offset_right = -75.0
+offset_bottom = -163.29999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ad3a0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer" unique_id=11373699]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1386030159]
 layout_mode = 2
+theme_override_font_sizes/font_size = 75
 text = "OPTIONS"
+horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=211421916]
+[node name="Label4" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=937665912]
 layout_mode = 2
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=247909465]
 layout_mode = 2
+theme_override_font_sizes/font_size = 60
 text = "DISPLAY"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=826877482]
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=923504837]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=113828856]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Window Mode"
 
+[node name="Label2" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1338103641]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "   "
+
 [node name="windowmodeoption" type="OptionButton" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=419352635]
+layout_mode = 2
+theme = SubResource("Theme_l4ffv")
+
+[node name="Label6" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=44834522]
 layout_mode = 2
 
 [node name="Label3" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=809750986]
 layout_mode = 2
+theme_override_font_sizes/font_size = 60
 text = "AUDIO"
+horizontal_alignment = 1
 
-[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=707160150]
+[node name="Label7" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1000309075]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1450889]
+[node name="HBoxContainer5" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1461942002]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=141162765]
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5" unique_id=1450889]
 layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer2" unique_id=141162765]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Master"
 
-[node name="masterslider" type="HSlider" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=2075652889]
+[node name="masterslider" type="HSlider" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer2" unique_id=2075652889]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("3_hhwow")
 max_value = 150.0
 
-[node name="mastervalue" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=937520450]
+[node name="mastervalue" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer2" unique_id=937520450]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "150"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=999894256]
+[node name="Control" type="Control" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5" unique_id=1892642594]
 layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=738895981]
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5" unique_id=999894256]
 layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer3" unique_id=738895981]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Music"
 
-[node name="musicslider" type="HSlider" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=1856314689]
+[node name="musicslider" type="HSlider" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer3" unique_id=1856314689]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("3_hhwow")
 max_value = 150.0
 
-[node name="musicvalue" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=2120213216]
+[node name="musicvalue" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer3" unique_id=2120213216]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "150"
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1638039861]
+[node name="Control2" type="Control" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5" unique_id=2064319230]
 layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=445027917]
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5" unique_id=1638039861]
 layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer4" unique_id=445027917]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "SFX"
 
-[node name="sfxslider" type="HSlider" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=1657237017]
+[node name="sfxslider" type="HSlider" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer4" unique_id=1657237017]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("3_hhwow")
 max_value = 150.0
 
-[node name="sfxvalue" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=659736753]
+[node name="sfxvalue" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer5/HBoxContainer4" unique_id=659736753]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "150"
 
-[node name="backbutton" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=135725033]
-layout_mode = 2
+[node name="backbutton" type="Button" parent="CanvasLayer" unique_id=135725033]
+offset_left = 63.999973
+offset_top = 583.0
+offset_right = 181.27496
+offset_bottom = 655.69
+theme = ExtResource("3_l4ffv")
+theme_override_font_sizes/font_size = 35
 text = "BACK"
+
+[node name="ColorRect10" type="ColorRect" parent="CanvasLayer" unique_id=708636959]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.1304
+offset_top = -194.28001
+offset_right = 176.1311
+offset_bottom = -189.28001
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="CanvasLayer" unique_id=2102792669]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.05173
+offset_top = -89.50003
+offset_right = 134.05176
+offset_bottom = -84.50003
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="CanvasLayer" unique_id=450672310]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.1239
+offset_top = 73.5
+offset_right = 100.1239
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://3c8ru4jg8hys" path="res://scenes/ui/spinselector.tscn" id="4_qwlqn"]
 [ext_resource type="PackedScene" uid="uid://bk84k4wpneb45" path="res://scenes/ui/hud.tscn" id="6_3yqkj"]
 [ext_resource type="PackedScene" uid="uid://c8uponahloqlp" path="res://scenes/ui/winscreen.tscn" id="7_if0f4"]
+[ext_resource type="PackedScene" uid="uid://b7rturhnaufel" path="res://scenes/elements/killbrick.tscn" id="9_ylsda"]
 
 [node name="level01" type="Node2D" unique_id=1407323172]
 script = ExtResource("1_qwlqn")
@@ -46,3 +47,6 @@ position = Vector2(89, 312)
 
 [node name="winscreen" parent="." unique_id=124814863 instance=ExtResource("7_if0f4")]
 visible = false
+
+[node name="killbrick" parent="." unique_id=255154150 instance=ExtResource("9_ylsda")]
+position = Vector2(586, 315)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://boxkhiu40dg2c"]
 
 [ext_resource type="Script" uid="uid://cm2al80am80a0" path="res://scripts/hole.gd" id="1_1m12r"]
-[ext_resource type="Texture2D" uid="uid://bve6041k37gbh" path="res://icon.svg" id="2_gaq0u"]
+[ext_resource type="Texture2D" uid="uid://d3qea6r0bs5jf" path="res://assets/sprites/hole.png" id="2_gaq0u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h5o7e"]
 
@@ -10,8 +10,8 @@ collision_layer = 8
 script = ExtResource("1_1m12r")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=544345094]
-position = Vector2(-2.9802322e-07, -2.3841858e-07)
-scale = Vector2(0.15625, 0.15625001)
+position = Vector2(-4.7683716e-07, 0)
+scale = Vector2(0.07812499, 0.078125)
 texture = ExtResource("2_gaq0u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1827738495]

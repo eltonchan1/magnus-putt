@@ -4,9 +4,17 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnhsa"]
 
-[node name="killbrick" type="Area2D" unique_id=255154150]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aejyg"]
+
+[node name="killbrick" type="Area2D" unique_id=255154150 groups=["kill_brick"]]
 collision_layer = 4
 script = ExtResource("1_aejyg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139596593]
 shape = SubResource("RectangleShape2D_jnhsa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=68712611]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=559917700]
+shape = SubResource("RectangleShape2D_aejyg")

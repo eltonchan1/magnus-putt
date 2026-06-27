@@ -12,6 +12,7 @@ extends Control
 var return_scene: String = "res://scenes/ui/mainmenu.tscn"
 
 func _ready():
+	return_scene = settingsmanager.options_return_scene
 	window_mode_option.add_item("Windowed", 0)
 	window_mode_option.add_item("Fullscreen", 1)
 	window_mode_option.selected = 1 if settingsmanager.fullscreen else 0

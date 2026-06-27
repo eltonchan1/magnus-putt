@@ -12,31 +12,14 @@ signal next_pressed
 signal menu_pressed
 
 func show_results(level_data: LevelData, shots: int):
-	var stars = _calculate_stars(level_data.par, shots)
-	savemanager.save_level(level_data.level_id, shots, stars)
+	savemanager.save_level(level_data.level_id, shots)
 	title_label.text = level_data.level_name
 	score_label.text = "%d shots  (Par %d)" % [shots, level_data.par]
-	stars_label.text = _stars_string(stars)
 	var best = savemanager.get_best_shots(level_data.level_id)
 	if best < shots:
-		score_label.text += "  (BEST: %d)" % best
+		score_label.text += " (BEST: %d)" % best
 	next_button.visible = level_data.next_level != ""
 	visible = true
-
-func _calculate_stars(par: int, shots: int) -> int:
-	if shots <= par - 2:
-		return 3
-	elif shots <= par:
-		return 2
-	elif shots <= par + 2:
-		return 1
-	else:
-		return 0
-
-func _stars_string(stars: int) -> String:
-	var filled = "★".repeat(stars)
-	var empty = "☆".repeat(3 - stars)
-	return filled + empty
 
 func _ready():
 	visible = false

@@ -1,37 +1,62 @@
 [gd_scene format=3 uid="uid://bk84k4wpneb45"]
 
 [ext_resource type="Script" uid="uid://mtm6cej3tuqm" path="res://scripts/hud.gd" id="1_0mwgc"]
+[ext_resource type="Theme" uid="uid://cor7nruga70gh" path="res://resources/buttonsmall.tres" id="2_hqnrr"]
+
+[sub_resource type="Theme" id="Theme_hqnrr"]
 
 [node name="hud" type="CanvasLayer" unique_id=571574833]
 script = ExtResource("1_0mwgc")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=347489095]
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 56.0
-offset_bottom = 56.0
+[node name="retrybutton" type="Button" parent="." unique_id=1715368616]
+offset_left = 665.0
+offset_top = 8.0
+offset_right = 802.275
+offset_bottom = 80.69
+theme = ExtResource("2_hqnrr")
+theme_override_font_sizes/font_size = 35
+text = "RETRY"
 
-[node name="shotlabel" type="Label" parent="HBoxContainer" unique_id=1136069769]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
+[node name="optionsbutton" type="Button" parent="." unique_id=428784638]
+offset_left = 811.0
+offset_top = 8.0
+offset_right = 983.0
+offset_bottom = 80.69
+theme = ExtResource("2_hqnrr")
+theme_override_font_sizes/font_size = 35
+text = "OPTIONS"
+
+[node name="levelselectbutton" type="Button" parent="." unique_id=356164188]
+offset_left = 991.0
+offset_top = 8.0
+offset_right = 1272.0
+offset_bottom = 80.69
+theme = ExtResource("2_hqnrr")
+theme_override_font_sizes/font_size = 35
+text = "LEVEL SELECT"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1126708568]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 200.0
+offset_bottom = 106.0
+theme = SubResource("Theme_hqnrr")
+color = Color(0.46666667, 0.9529412, 0.47843137, 1)
+
+[node name="shotlabel" type="Label" parent="." unique_id=1136069769]
+offset_left = 16.0
+offset_top = 13.0
+offset_right = 189.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(2.5569461e-08, 0.07813414, 4.813075e-08, 1)
+theme_override_font_sizes/font_size = 35
 text = "SHOTS: 3"
 
-[node name="parlabel" type="Label" parent="HBoxContainer" unique_id=719281117]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "  PAR: 3"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1679711817]
-offset_left = 212.0
-offset_top = 16.0
-offset_right = 212.0
-offset_bottom = 56.0
-
-[node name="retrybutton" type="Button" parent="HBoxContainer2" unique_id=1644530029]
-layout_mode = 2
-
-[node name="optionsbutton" type="Button" parent="HBoxContainer2" unique_id=21045171]
-layout_mode = 2
-
-[node name="levelselectbutton" type="Button" parent="HBoxContainer2" unique_id=1646209662]
-layout_mode = 2
+[node name="parlabel" type="Label" parent="." unique_id=719281117]
+offset_left = 59.0
+offset_top = 56.0
+offset_right = 189.0
+offset_bottom = 99.0
+theme_override_colors/font_color = Color(2.5569461e-08, 0.07813414, 4.813075e-08, 1)
+theme_override_font_sizes/font_size = 35
+text = "PAR: 3"

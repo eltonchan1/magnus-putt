@@ -29,12 +29,15 @@ grow_vertical = 2
 
 [node name="titlelabel" type="Label" parent="ColorRect/VBoxContainer" unique_id=42856520]
 layout_mode = 2
+text = "test"
 
 [node name="scorelabel" type="Label" parent="ColorRect/VBoxContainer" unique_id=658125040]
 layout_mode = 2
+text = "test"
 
 [node name="starslabel" type="Label" parent="ColorRect/VBoxContainer" unique_id=744079427]
 layout_mode = 2
+text = "test"
 
 [node name="nextbutton" type="Button" parent="ColorRect/VBoxContainer" unique_id=470702939]
 layout_mode = 2

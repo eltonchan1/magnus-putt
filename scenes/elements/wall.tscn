@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cu2fcb2vtx4se" path="res://scripts/wall.gd" id="1_6v3t3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c8uqr"]
-friction = 0.01
+friction = 0.1
 bounce = 0.5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6v3t3"]

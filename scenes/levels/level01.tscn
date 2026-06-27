@@ -14,39 +14,58 @@
 script = ExtResource("1_qwlqn")
 level_data = ExtResource("2_if0f4")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2096688725]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0, 0.1570405, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1814977256]
+offset_left = 148.0
+offset_top = 173.0
+offset_right = 1131.0
+offset_bottom = 585.0
+mouse_filter = 2
+color = Color(0.34901962, 0.59607846, 0.3529412, 1)
+
 [node name="hole" parent="." unique_id=962097323 instance=ExtResource("2_g0jr5")]
-position = Vector2(88, 510)
-
-[node name="wall" parent="." unique_id=810396097 instance=ExtResource("2_i4uh8")]
-position = Vector2(456, 416)
-scale = Vector2(39.78, 1)
-wall_color = Color(0.4, 0.4509804, 0.54901963, 0)
-
-[node name="wall2" parent="." unique_id=1249082453 instance=ExtResource("2_i4uh8")]
-position = Vector2(530.00006, 206)
-scale = Vector2(46.505, 1)
-wall_color = Color(0.4, 0.4509804, 0.54901963, 0)
-
-[node name="wall3" parent="." unique_id=1053393652 instance=ExtResource("2_i4uh8")]
-position = Vector2(536.00006, 602)
-scale = Vector2(46.505, 1)
-wall_color = Color(0.4, 0.4509804, 0.54901963, 0)
-
-[node name="wall4" parent="." unique_id=947712402 instance=ExtResource("2_i4uh8")]
-position = Vector2(1003, 404.99997)
-rotation = 1.5707964
-scale = Vector2(20.77, 1)
-wall_color = Color(0.4, 0.4509804, 0.54901963, 0)
+position = Vector2(1053, 428)
 
 [node name="ball" parent="." unique_id=458081983 instance=ExtResource("1_msin7")]
-position = Vector2(89, 312)
+position = Vector2(222, 404)
+continuous_cd = 2
 
 [node name="spinselector" parent="." unique_id=444263430 instance=ExtResource("4_qwlqn")]
+offset_left = 1160.0
+offset_top = 600.0
+offset_right = 1160.0
+offset_bottom = 600.0
 
 [node name="hud" parent="." unique_id=571574833 instance=ExtResource("6_3yqkj")]
 
 [node name="winscreen" parent="." unique_id=124814863 instance=ExtResource("7_if0f4")]
 visible = false
 
+[node name="wall" parent="." unique_id=810396097 instance=ExtResource("2_i4uh8")]
+position = Vector2(640, 175)
+scale = Vector2(25, 0.5)
+
+[node name="wall2" parent="." unique_id=1332495264 instance=ExtResource("2_i4uh8")]
+position = Vector2(150, 381)
+scale = Vector2(0.5, 10.79)
+
+[node name="wall3" parent="." unique_id=191083790 instance=ExtResource("2_i4uh8")]
+position = Vector2(1130, 381)
+scale = Vector2(0.5, 10.79)
+
+[node name="wall4" parent="." unique_id=1989360874 instance=ExtResource("2_i4uh8")]
+position = Vector2(640, 587)
+scale = Vector2(25, 0.5)
+
+[node name="wall5" parent="." unique_id=999080753 instance=ExtResource("2_i4uh8")]
+position = Vector2(640, 467.335)
+scale = Vector2(0.5, 5.77)
+
 [node name="killbrick" parent="." unique_id=255154150 instance=ExtResource("9_ylsda")]
-position = Vector2(586, 315)
+position = Vector2(640, 175)
+scale = Vector2(41.67, 1)

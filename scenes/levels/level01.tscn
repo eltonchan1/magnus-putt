@@ -29,7 +29,7 @@ mouse_filter = 2
 color = Color(0.34901962, 0.59607846, 0.3529412, 1)
 
 [node name="hole" parent="." unique_id=962097323 instance=ExtResource("2_g0jr5")]
-position = Vector2(1053, 428)
+position = Vector2(1069, 412)
 
 [node name="ball" parent="." unique_id=458081983 instance=ExtResource("1_msin7")]
 position = Vector2(222, 404)
@@ -63,9 +63,46 @@ position = Vector2(640, 587)
 scale = Vector2(25, 0.5)
 
 [node name="wall5" parent="." unique_id=999080753 instance=ExtResource("2_i4uh8")]
-position = Vector2(640, 467.335)
-scale = Vector2(0.5, 5.77)
+position = Vector2(640, 451.17)
+scale = Vector2(0.5, 7.11)
 
 [node name="killbrick" parent="." unique_id=255154150 instance=ExtResource("9_ylsda")]
 position = Vector2(640, 175)
-scale = Vector2(41.67, 1)
+scale = Vector2(47.985, 1)
+
+[node name="Label" type="Label" parent="." unique_id=2084590221]
+offset_left = 480.0
+offset_top = 116.0
+offset_right = 806.0
+offset_bottom = 159.0
+theme_override_colors/font_color = Color(1, 0.007843138, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Don't touch red"
+
+[node name="Label2" type="Label" parent="." unique_id=1501829081]
+offset_left = 265.0
+offset_top = 640.0
+offset_right = 1156.0
+offset_bottom = 683.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "Use this to change how the ball curves ->"
+
+[node name="Label3" type="Label" parent="." unique_id=918690176]
+offset_left = 6.0
+offset_top = 365.0
+offset_right = 136.0
+offset_bottom = 454.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "Drag 
+to aim"
+
+[node name="Label4" type="Label" parent="." unique_id=2022414329]
+offset_left = 1160.0
+offset_top = 400.0
+offset_right = 1247.0
+offset_bottom = 443.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "Hole"

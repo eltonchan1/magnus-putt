@@ -4,6 +4,8 @@
 
 [resource]
 script = ExtResource("1_4t4ok")
+level_name = "Introduction"
+par = 2
 scene_path = "res://scenes/levels/level01.tscn"
-next_level = "res://scenes/levels/levelbase.tscn"
+next_level = "res://scenes/levels/level02.tscn"
 metadata/_custom_type_script = "uid://cakjdqqejtjm4"

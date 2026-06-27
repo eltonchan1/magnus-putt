@@ -21,7 +21,7 @@ func _ready():
 		scenetransition.go_to(level_data.scene_path)
 	)
 	hud.levelselect_pressed.connect(func():
-		scenetransition.go_to("res://scenes/ui/mainmenu.tscn")
+		scenetransition.go_to("res://scenes/ui/levelselect.tscn")
 	)
 	hud.options_pressed.connect(func():
 		settingsmanager.options_return_scene = level_data.scene_path

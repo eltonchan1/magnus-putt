@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://fcjbt1gt3ktm"]
+
+[ext_resource type="Script" uid="uid://cw4kg831ruujf" path="res://scripts/level.gd" id="1_bhr4b"]
+[ext_resource type="Resource" uid="uid://bpjvl2lap6o5i" path="res://resources/levels/level01.tres" id="2_5rl6w"]
+[ext_resource type="PackedScene" uid="uid://boxkhiu40dg2c" path="res://scenes/elements/hole.tscn" id="3_2fscy"]
+[ext_resource type="PackedScene" uid="uid://b7na4ke7dkdw1" path="res://scenes/elements/ball.tscn" id="4_y213i"]
+[ext_resource type="PackedScene" uid="uid://3c8ru4jg8hys" path="res://scenes/ui/spinselector.tscn" id="5_sotb0"]
+[ext_resource type="PackedScene" uid="uid://bk84k4wpneb45" path="res://scenes/ui/hud.tscn" id="6_7dxjh"]
+[ext_resource type="PackedScene" uid="uid://c8uponahloqlp" path="res://scenes/ui/winscreen.tscn" id="7_bnjum"]
+[ext_resource type="PackedScene" uid="uid://cy0yobjocgg5v" path="res://scenes/elements/wall.tscn" id="8_1o61q"]
+[ext_resource type="PackedScene" uid="uid://b7rturhnaufel" path="res://scenes/elements/killbrick.tscn" id="9_4hhl2"]
+
+[node name="level01" type="Node2D" unique_id=1407323172]
+script = ExtResource("1_bhr4b")
+level_data = ExtResource("2_5rl6w")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2096688725]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0, 0.1570405, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1814977256]
+offset_left = 311.0
+offset_top = 173.0
+offset_right = 498.0
+offset_bottom = 585.0
+mouse_filter = 2
+color = Color(0.34901962, 0.59607846, 0.3529412, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=2065260425]
+offset_left = 311.0
+offset_top = 442.0
+offset_right = 963.0
+offset_bottom = 585.0
+mouse_filter = 2
+color = Color(0.34901962, 0.59607846, 0.3529412, 1)
+
+[node name="hole" parent="." unique_id=962097323 instance=ExtResource("3_2fscy")]
+position = Vector2(405, 234)
+
+[node name="ball" parent="." unique_id=458081983 instance=ExtResource("4_y213i")]
+position = Vector2(909, 511)
+continuous_cd = 2
+
+[node name="spinselector" parent="." unique_id=444263430 instance=ExtResource("5_sotb0")]
+offset_left = 1160.0
+offset_top = 600.0
+offset_right = 1160.0
+offset_bottom = 600.0
+
+[node name="hud" parent="." unique_id=571574833 instance=ExtResource("6_7dxjh")]
+
+[node name="winscreen" parent="." unique_id=124814863 instance=ExtResource("7_bnjum")]
+visible = false
+
+[node name="wall" parent="." unique_id=810396097 instance=ExtResource("8_1o61q")]
+position = Vector2(737.725, 438.64)
+scale = Vector2(12.115, 0.5)
+
+[node name="wall2" parent="." unique_id=1332495264 instance=ExtResource("8_1o61q")]
+position = Vector2(310.005, 381)
+scale = Vector2(0.5, 10.79)
+
+[node name="wall3" parent="." unique_id=191083790 instance=ExtResource("8_1o61q")]
+position = Vector2(969.95, 507.205)
+scale = Vector2(0.5, 3.925)
+
+[node name="wall4" parent="." unique_id=1989360874 instance=ExtResource("8_1o61q")]
+position = Vector2(640, 587)
+scale = Vector2(17, 0.5)
+
+[node name="wall6" parent="." unique_id=1957614956 instance=ExtResource("8_1o61q")]
+position = Vector2(411.355, 175)
+scale = Vector2(5.21, 0.5)
+
+[node name="wall5" parent="." unique_id=999080753 instance=ExtResource("8_1o61q")]
+position = Vector2(505.475, 306.395)
+scale = Vector2(0.5, 7.075)
+
+[node name="killbrick" parent="." unique_id=255154150 instance=ExtResource("9_4hhl2")]
+position = Vector2(310.5, 381)
+rotation = 1.5707964
+scale = Vector2(21.61, 1)
+
+[node name="killbrick2" parent="." unique_id=1705531405 instance=ExtResource("9_4hhl2")]
+position = Vector2(372, 587)
+scale = Vector2(7.15, 1)

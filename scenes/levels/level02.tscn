@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://fcjbt1gt3ktm"]
 
 [ext_resource type="Script" uid="uid://cw4kg831ruujf" path="res://scripts/level.gd" id="1_bhr4b"]
-[ext_resource type="Resource" uid="uid://bpjvl2lap6o5i" path="res://resources/levels/level01.tres" id="2_5rl6w"]
+[ext_resource type="Resource" uid="uid://dsesluj8ramh6" path="res://resources/levels/level02.tres" id="2_bhr4b"]
 [ext_resource type="PackedScene" uid="uid://boxkhiu40dg2c" path="res://scenes/elements/hole.tscn" id="3_2fscy"]
 [ext_resource type="PackedScene" uid="uid://b7na4ke7dkdw1" path="res://scenes/elements/ball.tscn" id="4_y213i"]
 [ext_resource type="PackedScene" uid="uid://3c8ru4jg8hys" path="res://scenes/ui/spinselector.tscn" id="5_sotb0"]
@@ -12,7 +12,7 @@
 
 [node name="level01" type="Node2D" unique_id=1407323172]
 script = ExtResource("1_bhr4b")
-level_data = ExtResource("2_5rl6w")
+level_data = ExtResource("2_bhr4b")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2096688725]
 offset_right = 1280.0
@@ -24,15 +24,33 @@ color = Color(0, 0.1570405, 0, 1)
 offset_left = 311.0
 offset_top = 173.0
 offset_right = 498.0
-offset_bottom = 585.0
+offset_bottom = 483.0
 mouse_filter = 2
 color = Color(0.34901962, 0.59607846, 0.3529412, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="." unique_id=2065260425]
-offset_left = 311.0
+offset_left = 413.0
 offset_top = 442.0
 offset_right = 963.0
 offset_bottom = 585.0
+mouse_filter = 2
+color = Color(0.34901962, 0.59607846, 0.3529412, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=150550071]
+offset_left = 486.18182
+offset_top = 321.18182
+offset_right = 689.69946
+offset_bottom = 464.18182
+rotation = 0.7853982
+mouse_filter = 2
+color = Color(0.34901962, 0.59607846, 0.3529412, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=2033125868]
+offset_left = 409.90912
+offset_top = 377.90912
+offset_right = 567.14343
+offset_bottom = 520.9091
+rotation = 0.7853982
 mouse_filter = 2
 color = Color(0.34901962, 0.59607846, 0.3529412, 1)
 
@@ -55,34 +73,40 @@ offset_bottom = 600.0
 visible = false
 
 [node name="wall" parent="." unique_id=810396097 instance=ExtResource("8_1o61q")]
-position = Vector2(737.725, 438.64)
-scale = Vector2(12.115, 0.5)
+position = Vector2(788.98, 438.64)
+scale = Vector2(9.51, 0.5)
 
-[node name="wall2" parent="." unique_id=1332495264 instance=ExtResource("8_1o61q")]
-position = Vector2(310.005, 381)
-scale = Vector2(0.5, 10.79)
+[node name="wall7" parent="." unique_id=504541721 instance=ExtResource("8_1o61q")]
+position = Vector2(555.0001, 389.00006)
+rotation = 0.7853982
+scale = Vector2(3.715, 0.5)
 
 [node name="wall3" parent="." unique_id=191083790 instance=ExtResource("8_1o61q")]
 position = Vector2(969.95, 507.205)
 scale = Vector2(0.5, 3.925)
 
 [node name="wall4" parent="." unique_id=1989360874 instance=ExtResource("8_1o61q")]
-position = Vector2(640, 587)
-scale = Vector2(17, 0.5)
+position = Vector2(729.54, 587)
+scale = Vector2(12.55, 0.5)
 
 [node name="wall6" parent="." unique_id=1957614956 instance=ExtResource("8_1o61q")]
 position = Vector2(411.355, 175)
 scale = Vector2(5.21, 0.5)
 
 [node name="wall5" parent="." unique_id=999080753 instance=ExtResource("8_1o61q")]
-position = Vector2(505.475, 306.395)
-scale = Vector2(0.5, 7.075)
+position = Vector2(505.475, 254.92)
+scale = Vector2(0.5, 4.46)
 
 [node name="killbrick" parent="." unique_id=255154150 instance=ExtResource("9_4hhl2")]
-position = Vector2(310.5, 381)
+position = Vector2(310, 327)
 rotation = 1.5707964
-scale = Vector2(21.61, 1)
+scale = Vector2(16.155, 1)
+
+[node name="killbrick3" parent="." unique_id=652406894 instance=ExtResource("9_4hhl2")]
+position = Vector2(359.99994, 532)
+rotation = 0.7853982
+scale = Vector2(7.33, 1)
 
 [node name="killbrick2" parent="." unique_id=1705531405 instance=ExtResource("9_4hhl2")]
-position = Vector2(372, 587)
-scale = Vector2(7.15, 1)
+position = Vector2(582.00006, 587)
+scale = Vector2(17.765, 1)

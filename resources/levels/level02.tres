@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://dsesluj8ramh6"]
 
+[ext_resource type="Texture2D" uid="uid://b0pkd0m2136o0" path="res://assets/previews/preview2.png" id="1_ly5xw"]
 [ext_resource type="Script" uid="uid://cakjdqqejtjm4" path="res://resources/leveldata.gd" id="1_p0a6u"]
 
 [resource]
@@ -7,6 +8,7 @@ script = ExtResource("1_p0a6u")
 level_name = "Big L"
 par = 2
 scene_path = "res://scenes/levels/level02.tscn"
-next_level = "res://scenes/levels/level02.tscn"
+next_level = "res://scenes/levels/level03.tscn"
+preview_image = ExtResource("1_ly5xw")
 level_id = "level02"
 metadata/_custom_type_script = "uid://cakjdqqejtjm4"

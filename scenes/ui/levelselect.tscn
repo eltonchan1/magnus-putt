@@ -15,11 +15,11 @@ script = ExtResource("1_q6jqj")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=241610088]
 
 [node name="levelgrid" type="GridContainer" parent="CanvasLayer" unique_id=363056321]
-offset_left = 75.0
-offset_top = 75.0
-offset_right = 1205.0
-offset_bottom = 645.0
-columns = 3
+offset_left = 69.0
+offset_top = 245.0
+offset_right = 1199.0
+offset_bottom = 475.0
+columns = 4
 
 [node name="backbutton" type="Button" parent="CanvasLayer" unique_id=1697190474]
 offset_left = 63.999973

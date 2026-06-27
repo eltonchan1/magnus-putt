@@ -19,12 +19,19 @@ const SPIN_TOP_MULTIPLIER: float = 0.25
 const SPIN_BACK_MULTIPLIER: float = 7.5
 const TRAIL_LENGTH = 20
 const MIN_TRAIL_SPEED = 20.0
+const SFX_WALL_HIT = preload("res://assets/sounds/freesound_community-click-104721.mp3")
+
+@onready var sfx_player: AudioStreamPlayer = AudioStreamPlayer.new()
 
 signal ball_stopped
 signal ball_entered_hole
 
 func _ready():
 	_setup_trail.call_deferred()
+	add_child(sfx_player)
+	sfx_player.bus = "SFX"
+	_setup_trail.call_deferred()
+	body_entered.connect(_on_body_entered)
 
 func _try_start_aim(mouse_pos: Vector2):
 	if is_moving:
@@ -99,6 +106,9 @@ func reset_spin():
 func _on_body_entered(body):
 	if body.is_in_group("hole_trigger"):
 		emit_signal("ball_entered_hole")
+	elif body is StaticBody2D and is_moving:
+		sfx_player.stream = SFX_WALL_HIT
+		sfx_player.play()
 
 var aim_line: Node2D = null
 

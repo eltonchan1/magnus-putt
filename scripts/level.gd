@@ -5,20 +5,27 @@ extends Node2D
 var shot_count: int = 0
 var par: int = 3
 
+const GAMEPLAY_MUSIC = preload("res://assets/sounds/paulyudin-chill-chill-music-513017.mp3")
+const SFX_LEVEL_COMPLETE = preload("res://assets/sounds/kids_cheering.mp3")
+
 @onready var ball = $ball
 @onready var spinselector = $spinselector
 @onready var hole = $hole
 @onready var hud = $hud
 @onready var win_screen = $winscreen
+@onready var sfx_player: AudioStreamPlayer = AudioStreamPlayer.new()
 
 func _ready():
+	musicmanager.play(GAMEPLAY_MUSIC)
+	add_child(sfx_player)
+	sfx_player.bus = "SFX"
 	spinselector.spin_changed.connect(_on_spin_changed)
 	hole.ball_holed.connect(_on_ball_holed)
 	win_screen.retry_pressed.connect(_on_retry)
 	win_screen.next_pressed.connect(_on_next)
 	win_screen.menu_pressed.connect(_on_menu)
 	hud.retry_pressed.connect(func():
-		scenetransition.go_to(level_data.scene_path)
+		get_tree().reload_current_scene()
 	)
 	hud.levelselect_pressed.connect(func():
 		scenetransition.go_to("res://scenes/ui/levelselect.tscn")
@@ -27,7 +34,7 @@ func _ready():
 		settingsmanager.options_return_scene = level_data.scene_path
 		scenetransition.go_to("res://scenes/ui/options.tscn")
 	)
-	hud.setup(par)
+	hud.setup(level_data.par)
 	for brick in get_tree().get_nodes_in_group("kill_brick"):
 		brick.ball_killed.connect(_on_ball_killed)
 
@@ -36,9 +43,9 @@ func _on_spin_changed(spin: Vector2):
 		ball.set_spin(spin)
 
 func _on_ball_holed():
+	sfx_player.stream = SFX_LEVEL_COMPLETE
+	sfx_player.play()
 	hud.update_shots(shot_count)
-	print("holed, shots taken: ", shot_count, " shots vs par ", par)
-	print("ball holed signal received")
 	win_screen.show_results(level_data, shot_count)
 
 func _on_retry():
@@ -65,4 +72,4 @@ func _unhandled_input(event: InputEvent):
 			ball._update_aim(event.global_position)
 
 func _on_ball_killed():
-	scenetransition.go_to(level_data.scene_path)
+	get_tree().reload_current_scene.call_deferred()

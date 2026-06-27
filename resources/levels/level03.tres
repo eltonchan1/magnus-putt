@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bw3m0rpr7is11"]
+
+[ext_resource type="Script" uid="uid://cakjdqqejtjm4" path="res://resources/leveldata.gd" id="1_hbmff"]
+[ext_resource type="Texture2D" uid="uid://byd4xv2dc6dsa" path="res://assets/previews/preview3.png" id="1_pflxf"]
+
+[resource]
+script = ExtResource("1_hbmff")
+level_name = "Going Back"
+par = 2
+scene_path = "res://scenes/levels/level03.tscn"
+next_level = "res://scenes/levels/level03.tscn"
+preview_image = ExtResource("1_pflxf")
+level_id = "level03"
+metadata/_custom_type_script = "uid://cakjdqqejtjm4"

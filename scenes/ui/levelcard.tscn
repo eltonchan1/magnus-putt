@@ -20,7 +20,7 @@ corner_detail = 1
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_4pr2w")
 
 [node name="levelcard" type="PanelContainer" unique_id=1767250796]
-custom_minimum_size = Vector2(200, 178)
+custom_minimum_size = Vector2(282, 178)
 offset_right = 200.0
 offset_bottom = 168.0
 theme = SubResource("Theme_1yax7")

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://dbw0fnvjqr200"]
+
+[ext_resource type="Script" uid="uid://cakjdqqejtjm4" path="res://resources/leveldata.gd" id="1_7nnex"]
+[ext_resource type="Texture2D" uid="uid://bwjaxmiulp5ip" path="res://assets/previews/preview4.png" id="1_06027"]
+
+[resource]
+script = ExtResource("1_7nnex")
+level_name = "The Final Challenge"
+par = 2
+scene_path = "res://scenes/levels/level04.tscn"
+next_level = "res://scenes/levels/level04.tscn"
+preview_image = ExtResource("1_06027")
+level_id = "level04"
+metadata/_custom_type_script = "uid://cakjdqqejtjm4"

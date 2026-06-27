@@ -6,7 +6,7 @@ var master_volume: float = 100.0
 var music_volume: float = 100.0
 var sfx_volume: float = 100.0
 var fullscreen: bool = false
-var options_return_scene: String = "res://scenes/ui/main_menu.tscn"
+var options_return_scene: String = "res://scenes/ui/mainmenu.tscn"
 
 func _ready():
 	config.load(SAVE_PATH)

@@ -24,6 +24,7 @@ buses/default_bus_layout="uid://pmd7p0yedsgq"
 savemanager="*uid://bl7g6fk5oyfw8"
 settingsmanager="*uid://c2ruvk0rgvd3t"
 scenetransition="*uid://dhml6vxb8ukil"
+musicmanager="*uid://caykknt76iass"
 
 [display]
 
